@@ -3,5 +3,6 @@
 > Please check out each folder for more imformation.
 ## Graduate level 
 - 2020 String Matching Engine
-  > Pass level A  
+  > Pass level A with score = 100  
 - 2021 Geofence  
+  > Pass level   with area =

@@ -5,4 +5,4 @@
 - 2020 String Matching Engine
   > Pass level A with score = 100  
 - 2021 Geofence  
-  > Pass level A with area = 39412 (A level bar is 110000)    
+  > Pass level A with area = 39412 (A level grading must under 110000)    

@@ -1,0 +1,72 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : CONV
+Version: O-2018.06
+Date   : Mon Nov  4 16:20:59 2024
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: count_calc_r_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: iaddr_r_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  CONV               tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  count_calc_r_reg[2]/CK (DFFRX2)                         0.00       0.50 r
+  count_calc_r_reg[2]/Q (DFFRX2)                          0.56       1.06 r
+  U1611/Y (NOR2X2)                                        0.21       1.27 f
+  U1196/Y (NAND2X1)                                       0.52       1.79 r
+  U906/Y (INVX2)                                          0.23       2.02 f
+  U763/Y (NAND2X1)                                        0.50       2.52 r
+  U899/Y (INVX2)                                          0.24       2.76 f
+  U1024/Y (NAND2X2)                                       0.21       2.96 r
+  U1001/Y (NAND2X1)                                       0.22       3.18 f
+  U2645/Y (INVXL)                                         0.33       3.51 r
+  U2646/Y (NAND4X1)                                       0.24       3.75 f
+  U2647/Y (XOR2X1)                                        0.30       4.04 f
+  DP_OP_114J1_123_3810/U13/CO (ADDFX1)                    0.38       4.42 f
+  DP_OP_114J1_123_3810/U12/CO (ADDFXL)                    0.51       4.93 f
+  DP_OP_114J1_123_3810/U11/CO (ADDFX1)                    0.39       5.32 f
+  DP_OP_114J1_123_3810/U10/CO (ADDFXL)                    0.50       5.82 f
+  DP_OP_114J1_123_3810/U9/CO (ADDFXL)                     0.53       6.35 f
+  DP_OP_114J1_123_3810/U8/CO (ADDFXL)                     0.53       6.87 f
+  DP_OP_114J1_123_3810/U7/CO (ADDFXL)                     0.53       7.40 f
+  DP_OP_114J1_123_3810/U6/CO (ADDFXL)                     0.52       7.92 f
+  DP_OP_114J1_123_3810/U5/CO (ADDFHX1)                    0.36       8.28 f
+  DP_OP_114J1_123_3810/U4/CO (ADDFX2)                     0.37       8.65 f
+  DP_OP_114J1_123_3810/U3/CO (ADDFX2)                     0.36       9.01 f
+  U1622/Y (XOR2X1)                                        0.26       9.27 f
+  U1311/Y (AOI222XL)                                      0.69       9.96 r
+  U932/Y (INVX1)                                          0.20      10.16 f
+  iaddr_r_reg[11]/D (DFFRX1)                              0.00      10.16 f
+  data arrival time                                                 10.16
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  iaddr_r_reg[11]/CK (DFFRX1)                             0.00      10.40 r
+  library setup time                                     -0.24      10.16
+  data required time                                                10.16
+  --------------------------------------------------------------------------
+  data required time                                                10.16
+  data arrival time                                                -10.16
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

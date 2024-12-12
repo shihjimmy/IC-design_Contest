@@ -5,6 +5,8 @@
 > If you are interested in my design, please check out each folder for more imformation.
 
 ## Graduate level 
+- 2018 Huffman Coding
+  > Pass level A   
 - 2019 Image Convolution Circuit Design
   > Pass level S with area = 25626 ("S" level grading must under 270000)    
 - 2020 String Matching Engine

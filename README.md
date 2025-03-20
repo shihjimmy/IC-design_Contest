@@ -5,6 +5,8 @@
 > If you are interested in my design, please check out each folder for more imformation.
 
 ## Graduate level 
+- 2016 Local Binary Patterns
+  > Pass level A with area x time = 5214.4 x 571560 = 2.98e9 ("A" level grading must under 12e9)  
 - 2018 Huffman Coding
   > Pass level A with all patterns passed
 - 2019 Image Convolution Circuit Design

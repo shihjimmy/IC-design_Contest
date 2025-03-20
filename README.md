@@ -10,7 +10,7 @@
 - 2018 Huffman Coding
   > Pass level A with all patterns passed
 - 2019 Image Convolution Circuit Design
-  > Pass level S with area = 25626 ("S" level grading must under 270000)    
+  > Pass level S with area = 25,626 ("S" level grading must under 270,000)    
 - 2020 String Matching Engine
   > Pass level A with score = 100  
 - 2021 Geofence  

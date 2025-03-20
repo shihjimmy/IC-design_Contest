@@ -1,0 +1,63 @@
+# .cshrc
+if ( $?prompt ) then
+    source /cad/source.cshrc
+    set autolist
+endif
+# User specific aliases and functions
+alias rm 'rm -i'
+alias cp 'cp -i'
+alias mv 'mv -i'
+#setenv LD_LIBRARY_PATH	${LD_LIBRARY_PATH}:"/usr/lib64"
+
+#  Device  | DS1515    | DS1515   | Winnie    | Snoopy         |
+# ------------------------------------------------------------------------------------
+#  Release | Pro       | Standard | Pro       | Pro            |
+# -------------------------------------------------------------------------------------
+#  Version | 15.0/17.0 | 21.3     | 18.1/19.1 | 18.1/19.1/21.3 |
+# -------------------------------------------------------------------------------------------------
+#  Local   | false     | fasle    | true      | true           |
+# ------------------------------------------------------------------------------------
+#  Board   | de5net    | de5net   | de10_pro  | de10_pro       |
+# ------------------------------------------------------------------------
+
+
+setenv STUDENT_ID "YOUR_STUDENT_ID"
+setenv RELEASE "intelFPGA" # Standard: intelFPGA, Pro: intelFPGA_pro
+setenv VERSION 17.0
+setenv LOCAL false
+setenv BOARD de5net # de5net, de10_pro
+
+if ( $LOCAL == true ) then
+    setenv INSTALL_DIR /opt/$RELEASE/$VERSION
+else
+    setenv INSTALL_DIR /mnt/ds1515/opt/$RELEASE/$VERSION
+endif
+
+
+#setenv QSYS_ROOTDIR /opt/intelFPGA/18.0/quartus/sopc_builder/bin
+#setenv INTELFPGAOCLSDKROOT /opt/intelFPGA/18.0/hld
+#setenv QUARTUS_ROOTDIR /opt/intelFPGA/18.0/quartus
+#setenv AOCL_BOARD_PACKAGE_ROOT "$INTELFPGAOCLSDKROOT/board/terasic/de5net"
+#setenv PATH '$PATH:$QUARTUS_ROOTDIR/bin:$INTELFPGAOCLSDKROOT/bin'
+#setenv LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:"$AOCL_BOARD_PACKAGE_ROOT/linux64/lib":"\
+#"$INTELFPGAOCLSDKROOT/host/linux64/lib:$AOCL_BOARD_PACKAGE_ROOT/tests/extlibs/lib"
+#export LM_LICENSE_FILE=${LM_LICENSE_FILE}:/opt/intelFPGA/18.0/license.dat
+
+setenv QUARTUS_ROOTDIR $INSTALL_DIR/quartus
+setenv INTELFPGAOCLSDKROOT $INSTALL_DIR/hld
+setenv AOCL_BOARD_PACKAGE_ROOT $INTELFPGAOCLSDKROOT/board/$BOARD
+setenv NIOS_ROOTDIR /opt/intelFPGA/$VERSION/nios2eds
+setenv PATH ${PATH}:"$QUARTUS_ROOTDIR/bin:$INTELFPGAOCLSDKROOT/linux64/bin:$INTELFPGAOCLSDKROOT/bin:$INTELFPGAOCLSDKROOT/host/linux64/bin:/opt/intelFPGA/$VERSION/qsys/bin/:$NIOS_ROOTDIR/bin:$NIOS_ROOTDIR/bin/gnu/H-x86_64-pc-linux-gnu/bin/"
+setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:"$AOCL_BOARD_PACKAGE_ROOT/linux64/lib:$INTELFPGAOCLSDKROOT/host/linux64/lib:$AOCL_BOARD_PACKAGE_ROOT/tests/extlibs/lib"
+setenv QUARTUS_64BIT 1
+
+# Eeyore
+# setenv LM_LICENSE_FILE /home/$STUDENT_ID/Quartus_License/Eeyore/1-UKAN49_License.dat
+# Lotso
+# setenv LM_LICENSE_FILE /home/$STUDENT_ID/Quartus_License/Lotso/1-T77OSL_License.dat
+# Patrick
+# setenv LM_LICENSE_FILE /home/$STUDENT_ID/Quartus_License/Patrick/LR-066861_License.dat
+# Snoopy
+# setenv LM_LICENSE_FILE /home/$STUDENT_ID/Quartus_License/Snoopy/1-UM9K8R_License.dat
+# Winnie
+# setenv LM_LICENSE_FILE /home/$STUDENT_ID/Quartus_License/Winnie/1-UKAN3Z_License.dat

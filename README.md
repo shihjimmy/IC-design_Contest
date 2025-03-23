@@ -6,7 +6,9 @@
 
 ## Graduate level 
 - 2016 Local Binary Patterns
-  > Pass level A with area x time = 5214.4 x 571560 = 2.98e9 ("A" level grading must under 12e9)  
+  > Pass level A with area x time = 5214.4 x 571560 = 2.98e9 ("A" level grading must under 12e9)
+- 2017 Distance Transform
+  > Pass level A with area = 8085 and time = 330,042 ns ("A level grading: area must under 12500 and time must under 1,920,000 ns)  
 - 2018 Huffman Coding
   > Pass level A with all patterns passed
 - 2019 Image Convolution Circuit Design
